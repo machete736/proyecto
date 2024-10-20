@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Apruéveme!</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        #animated-image {
+            position: relative;
+            width: 150px;
+            height: auto;
+            animation: move 5s infinite alternate;
+        }
+        @keyframes move {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(300px); }
+        }
+        h1 {
+            color: #FF5722;
+        }
+    </style>
+</head>
+<body>
+    <h1>¡Apruéveme!</h1>
+    <img id="animated-image" src="{{ url_for('static', filename='image.jpg') }}" alt="Imagen en movimiento">
+</body>
+</html>
